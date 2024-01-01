@@ -1,0 +1,201 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+}
+body {
+    background-color: #36384D;
+}
+h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #2E2F4E;
+}
+
+/* Main Body Design */
+main {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    place-items: center;
+    background-color: #fff;
+    width: 65%;
+    max-height: 550px;
+    margin-inline: auto;
+    margin-block: 70px;
+    padding: 5px;
+    border-radius: 20px;
+    box-shadow: rgba(0, 0, 0, 0.19) 0px 10px 20px, rgba(0, 0, 0, 0.23) 0px 6px 6px;
+    transition: all 1s ease;
+}
+main > * {
+    margin: 0 25px;
+}
+main p, main li {
+    color: #2E2F4E;
+}
+main p, main li {
+    font-weight: 400;
+}
+main h1 {
+    margin: 20px 0;
+}
+main li {
+    list-style: none;
+}
+main .image-container {
+    height: 500px;
+    width: auto;
+    position: relative;
+}
+main .image-container .illustrator-img {
+    height: 100%;
+    width: 100%;
+}
+.form-container > * {
+    margin-block-end: 20px;
+}
+.list-container span {
+    padding-inline-end: 15px;
+}
+.email-form {
+    display: block;
+    position: relative;
+}
+.email-form > * {
+    margin-block-end: 20px;
+}
+.email-form .email-label, .email-form .error-message {
+    font-weight: 700;
+    color: #2E2F4E;
+}
+.email-form .email-field {
+    width: 100%;
+    height: 50px;
+    padding: 5px 10px;
+    margin-block: 10px 20px;
+    border-radius: 8px;
+    outline: none;
+    border: 2px solid #C5C5C5;
+}
+.email-form .error-message {
+    color: #ff6257;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.email-form .email-field:focus {
+    border: 2px solid #25242C;
+}
+.email-form .submit-btn {
+    cursor: pointer;
+    background-color: #232742;
+    color: #fff;
+    width: 100%;
+    padding-block: 20px;
+    border: none;
+    border-radius: 8px;
+}
+.email-form .submit-btn:hover, #success-message a:hover {
+    background-image: linear-gradient(#FF5671, #FF5E59, #FE6941);
+}
+
+/* Success Message */
+#success-message {
+    background-color: #fff;
+    width: 400px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    border-radius: 20px;
+    padding: 20px 40px;
+    display: none;
+}
+#success-message > * {
+    margin-block: 10px;
+}
+.icon-container {
+    width: 50px;
+    height: 50px;
+}
+.icon-container img {
+    width: 100%;
+    height: 100%;
+}
+#success-message p {
+    color: #2E2F4E;
+}
+#success-message span {
+    font-weight: bold;
+}
+#success-message a {
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+    color: #fff;
+    background-color: #232742;
+    text-align: center;
+    padding: 15px 0;
+    margin-block: 10px;
+    border-radius: 10px;
+}
+
+.attribution { 
+    font-size: 11px; 
+    text-align: center; 
+    color: #fff;
+}
+.attribution a { 
+    color: hsl(228, 45%, 44%); 
+}
+
+@media (max-width: 1050px) {
+    main {
+        max-height: fit-content;
+        width: fit-content;
+        grid-template-columns: 1fr;
+        margin-block: 0;
+        padding: 0;
+    }
+    main > * {
+        grid-row: span 2;
+    }
+    main .image-container {
+        order: -1;
+        width: 100%;
+        height: fit-content;
+    }
+}
+@media (max-width: 600px) {
+    main h1 {
+        margin: 0;
+    }
+    main .image-container {
+        padding: 0;
+        margin: 0;
+        height: fit-content;
+    }    
+    main .image-container .illustrator-img {
+        width: 100%;
+        height: fit-content;
+    }
+}
+@media (max-width: 410px) {
+    #success-message {
+        height: 100vh;
+        border-radius: 0;
+    }
+    #success-message > * {
+        margin-block: 30px;
+    }
+    #success-message a {
+        margin-block-start: 180px;
+    }
+    .icon-container {
+        width: 60px;
+        height: 60px;
+    }
+}
