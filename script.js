@@ -17,7 +17,7 @@ function validateEmail(){
     errorMessage.innerHTML = "";
     emailField.style.border = "2px solid #C5C5C5";
     location.href = form.getAttribute("action");
-    successPage.style.display = "block";
+    successPage.style.display = "flex";
     signupPage.style.display = "none";
     emailValue.innerHTML = emailField.value;
     returnToPage()
